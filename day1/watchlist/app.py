@@ -4,4 +4,9 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-    return "<h1>Hello,flask</h1>"
+    return "<h1>Hello,flask 中国</h1>"
+
+#动态路由
+@app.route('/index/<name>')
+def home(name):
+    return "<h1>Hello,flask, %s</h1>"%name
