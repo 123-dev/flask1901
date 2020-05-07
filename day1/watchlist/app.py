@@ -66,7 +66,3 @@ def initdb(drop):
     db.create_all()
     click.echo("初始化数据库完成")
 
-# #动态路由
-# @app.route('/index/<name>')
-# def home(name):
-#     return "<h1>Hello,flask, %s</h1>"%name
