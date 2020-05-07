@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ name }}'s,WatchList</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
 </head>
+
 <body>
-    <h2>{{ name }}'s WatchList</h2>
+    <h2>
+        <img class="avatar" src="{{ url_for('static',filename='images/666.jpg') }}" alt="头像">
+        {{ name }}'s WatchList
+    </h2>
     {# 过滤器   变量|过滤器名 #}
     <p>总共{{ movies|length }}</p>
-    <ul>
+    <ul class="movie-list">
         {% for movie in movies %}
         <li>{{movie.title }} - {{ movie.year }}</li>
         {% endfor %}
-    </ul>
+    </ul >
     <footer>
         <small>&copy;2020<a href="#">1901电影列表</a></small>
     </footer>
